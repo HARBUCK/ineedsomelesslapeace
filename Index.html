@@ -1,0 +1,83 @@
+
+<!DOCTYPE html>
+<html>
+<head>
+    <title>My Game Website</title>
+    <style>
+        body {
+            background: #111827;
+            color: white;
+            font-family: Arial;
+            text-align: center;
+            margin: 0;
+        }
+
+        header {
+            background: #1f2937;
+            padding: 25px;
+        }
+
+        h1 {
+            color: #38bdf8;
+        }
+
+        .games {
+            display: flex;
+            justify-content: center;
+            flex-wrap: wrap;
+            gap: 20px;
+            padding: 30px;
+        }
+
+        .game {
+            background: #273449;
+            padding: 25px;
+            border-radius: 12px;
+            width: 220px;
+        }
+
+        button {
+            background: #0ea5e9;
+            color: white;
+            border: none;
+            padding: 12px 20px;
+            border-radius: 8px;
+            cursor: pointer;
+        }
+
+        button:hover {
+            background: #0284c7;
+        }
+    </style>
+</head>
+<body>
+
+<header>
+    <h1>🎮 My Game Website</h1>
+    <p>Welcome to my gaming website!</p>
+</header>
+
+<div class="games">
+    <div class="game">
+        <h2>Clicker Game</h2>
+        <p>Points: <span id="score">0</span></p>
+        <button onclick="addPoint()">Play Game</button>
+    </div>
+
+    <div class="game">
+        <h2>Coming Soon</h2>
+        <p>New games coming soon!</p>
+    </div>
+</div>
+
+<script>
+let score = 0;
+
+function addPoint() {
+    score++;
+    document.getElementById("score").textContent = score;
+}
+</script>
+
+</body>
+</html>
